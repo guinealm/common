@@ -1,0 +1,53 @@
+INSTRUCCIÓN PARA CODEX EN VSCODE
+
+Actúa como ejecutor técnico. No rediseñes la identidad visual.
+
+OBJETIVO
+Separar la identidad visual común de Jumalenin en `common`, y dejar `home` como una página que consume esa identidad.
+
+La carpeta fuente de los archivos a lo que se refiere esta INSTRUCCIÓN es: c:\jumalenin-ecosistema\common\docs\arquitectura\jumalenin-identidad-visual-common
+
+Usa los archivos de esa carpeta como contenido exacto para aplicar `INSTRUCCION-CODEX.txt`.
+
+PASOS
+
+1. En el proyecto o repositorio que corresponda a common, crea o sustituye:
+
+common/index.html
+common/assets/css/jumalenin-core.css
+common/assets/css/jumalenin-layout.css
+common/assets/css/jumalenin-components.css
+common/assets/img/favicon.svg
+common/assets/img/logo.svg
+common/assets/img/logo-horizontal.svg
+
+2. Publica `common` como:
+
+https://common.jumalenin.com
+
+3. En el proyecto o repositorio que corresponda a home, sustituye o adapta:
+
+home/index.html
+
+4. El `index.html` de home debe cargar SIEMPRE la identidad visual desde:
+
+https://common.jumalenin.com/assets/css/jumalenin-core.css
+https://common.jumalenin.com/assets/css/jumalenin-layout.css
+https://common.jumalenin.com/assets/css/jumalenin-components.css
+https://common.jumalenin.com/assets/img/favicon.svg
+https://common.jumalenin.com/assets/img/logo-horizontal.svg
+
+5. No copies `/assets` dentro de home salvo que sea solo una prueba local provisional.
+
+6. Comprueba:
+   - common muestra el logo y los estilos.
+   - home carga estilos desde common.
+   - aparece el favicon de Jumalenin, no el de Hostinger.
+   - las tarjetas de home aparecen en dos columnas en escritorio.
+   - en móvil pasan a una columna.
+
+7. Commit recomendado para common:
+   Add Jumalenin shared visual identity
+
+8. Commit recomendado para home:
+   Use shared Jumalenin identity from common

@@ -1,0 +1,50 @@
+1. En el proyecto o repositorio que corresponda a common, crea o sustituye:
+
+common/index.html
+common/assets/css/jumalenin-core.css
+common/assets/css/jumalenin-layout.css
+common/assets/css/jumalenin-components.css
+common/assets/img/favicon.svg
+common/assets/img/logo.svg
+common/assets/img/logo-horizontal.svg
+
+HECHO
+
+2. Publica `common` como:
+
+https://common.jumalenin.com
+
+NO LO ENTIENDO
+
+3. En el proyecto o repositorio que corresponda a home, sustituye o adapta:
+
+home/index.html
+
+EL ARCHIVO NO HA CAMBIADO
+
+4. El `index.html` de home debe cargar SIEMPRE la identidad visual desde:
+
+https://common.jumalenin.com/assets/css/jumalenin-core.css
+https://common.jumalenin.com/assets/css/jumalenin-layout.css
+https://common.jumalenin.com/assets/css/jumalenin-components.css
+https://common.jumalenin.com/assets/img/favicon.svg
+https://common.jumalenin.com/assets/img/logo-horizontal.svg
+
+NO LO HA CAMBIADO. SOLO VEO <link rel="stylesheet" href="assets/css/home.css">
+
+5. No copies `/assets` dentro de home salvo que sea solo una prueba local provisional.
+
+NO LO ENTIENDO
+
+6. Comprueba:
+   - common muestra el logo y los estilos. NO
+   - home carga estilos desde common. NO
+   - aparece el favicon de Jumalenin, no el de Hostinger. NO
+   - las tarjetas de home aparecen en dos columnas en escritorio. NO
+   - en móvil pasan a una columna. NO COMPROBADO
+
+7. Commit recomendado para common: NO HE LLEGADO
+   Add Jumalenin shared visual identity
+
+8. Commit recomendado para home: NO HE LLEGADO
+   Use shared Jumalenin identity from common
