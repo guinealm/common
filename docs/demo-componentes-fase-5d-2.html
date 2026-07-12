@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jumalenin - Demo de Componentes 5D.2</title>
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/jumalenin-core.css">
+  <link rel="stylesheet" href="/assets/css/jumalenin-layout.css">
+  <link rel="stylesheet" href="/assets/css/jumalenin-components.css">
+
+  <style>
+    .demo-block {
+      padding: 1rem;
+      border: 1px dashed var(--jm-border-strong);
+      border-radius: var(--jm-radius-sm);
+      background: var(--jm-surface-soft);
+      margin-bottom: 1rem;
+    }
+
+    .demo-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .demo-kv {
+      margin-top: 0.5rem;
+      color: var(--jm-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .demo-code {
+      font-family: Consolas, "Courier New", monospace;
+      background: #eef2f3;
+      border: 1px solid var(--jm-border);
+      border-radius: 6px;
+      padding: 0.12rem 0.35rem;
+      color: #1f2933;
+    }
+  </style>
+</head>
+<body class="site-shell">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="/index.html" aria-label="Inicio Jumalenin Common">
+        <img src="/assets/img/logo-horizontal.svg" alt="Jumalenin">
+      </a>
+      <nav class="site-nav" aria-label="Navegacion de demo">
+        <a href="#layout">Layout</a>
+        <a href="#acciones">Acciones</a>
+        <a href="#contenido">Contenido</a>
+        <a href="#mensajes">Mensajes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <span class="hero-kicker">Fase 5D.2</span>
+          <h1 class="hero-title">Demo de componentes</h1>
+          <p class="hero-lead">
+            Esta pagina muestra los componentes reales del nucleo comun para validar
+            consistencia visual, responsive y contrato de uso.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#acciones">Ver botones</a>
+            <a class="btn btn-secondary" href="#contenido">Ver tarjetas</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Reglas de carga">
+          <p><strong>Orden CSS canonico</strong></p>
+          <ul class="meta-list">
+            <li><strong>1.</strong> <span class="demo-code">jumalenin-core.css</span></li>
+            <li><strong>2.</strong> <span class="demo-code">jumalenin-layout.css</span></li>
+            <li><strong>3.</strong> <span class="demo-code">jumalenin-components.css</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="layout" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Layout y grid</h2>
+          <p>Comprobacion de <span class="demo-code">container</span>, <span class="demo-code">section</span> y rejillas responsivas.</p>
+        </header>
+
+        <div class="demo-block">
+          <div class="grid grid-2">
+            <article class="card">
+              <h3>Grid 2 - Item A</h3>
+              <p>Elemento de prueba para layout en dos columnas.</p>
+            </article>
+            <article class="card">
+              <h3>Grid 2 - Item B</h3>
+              <p>Debe colapsar a una sola columna en pantallas estrechas.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="demo-block">
+          <div class="grid grid-3">
+            <article class="card"><h3>Grid 3 - 1</h3><p>Tarjeta demo.</p></article>
+            <article class="card"><h3>Grid 3 - 2</h3><p>Tarjeta demo.</p></article>
+            <article class="card"><h3>Grid 3 - 3</h3><p>Tarjeta demo.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="acciones" class="section section-muted">
+      <div class="container">
+        <header class="section-header">
+          <h2>Acciones</h2>
+          <p>Variantes del componente <span class="demo-code">.btn</span>.</p>
+        </header>
+
+        <div class="demo-block">
+          <div class="demo-row">
+            <a class="btn btn-primary" href="#">.btn .btn-primary</a>
+            <a class="btn btn-secondary" href="#">.btn .btn-secondary</a>
+            <a class="btn btn-accent" href="#">.btn .btn-accent</a>
+          </div>
+          <p class="demo-kv">Todos mantienen altura minima tactil y feedback de hover/focus.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contenido" class="section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Tarjetas y enlaces</h2>
+          <p>Composicion con <span class="demo-code">.card</span>, <span class="demo-code">.project-card</span> y <span class="demo-code">.card-link</span>.</p>
+        </header>
+
+        <div class="grid grid-3">
+          <article class="card project-card">
+            <span class="badge badge-primary">Proyecto</span>
+            <h3>Tarjeta base</h3>
+            <p>Bloque reutilizable para resaltar recursos o secciones.</p>
+            <div class="card-footer"><a class="card-link" href="#">Ver detalle</a></div>
+          </article>
+
+          <article class="card project-card">
+            <span class="badge badge-accent">Destacado</span>
+            <h3>Tarjeta destacada</h3>
+            <p>Variante orientada a contenido prioritario.</p>
+            <div class="card-footer"><a class="card-link" href="#">Abrir recurso</a></div>
+          </article>
+
+          <article class="card project-card">
+            <span class="badge">Meta</span>
+            <h3>Tarjeta informativa</h3>
+            <p>Formato recomendado para listados de proyectos.</p>
+            <div class="card-footer"><a class="card-link" href="#">Consultar</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="mensajes" class="section section-muted">
+      <div class="container">
+        <header class="section-header">
+          <h2>Mensajes y metadatos</h2>
+          <p>Uso de <span class="demo-code">.notice</span> y <span class="demo-code">.meta-list</span>.</p>
+        </header>
+
+        <div class="notice">
+          <p><strong>Nota:</strong> este bloque comunica avisos relevantes sin romper jerarquia visual.</p>
+          <p>Se recomienda para alertas de estado, decisiones tecnicas o contexto operativo.</p>
+        </div>
+
+        <div class="demo-block" style="margin-top:1rem;">
+          <ul class="meta-list">
+            <li><strong>Componente:</strong> badge</li>
+            <li><strong>Componente:</strong> button</li>
+            <li><strong>Componente:</strong> card</li>
+            <li><strong>Componente:</strong> notice</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Jumalenin · Demo de componentes 5D.2</p>
+      <p><a href="/index.html">Volver a Common</a></p>
+    </div>
+  </footer>
+</body>
+</html>
